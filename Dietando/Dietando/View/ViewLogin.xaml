@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+			 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+			 xmlns:vm="clr-namespace:Dietando.ViewModel;assembly=Dietando" 
+			 x:Class="Dietando.View.ViewLogin" BackgroundColor="White">
+	<ContentPage.BindingContext>
+		<vm:LoginViewModel />
+	</ContentPage.BindingContext>
+	<ContentPage.Content>
+		<StackLayout Orientation="Vertical" VerticalOptions="CenterAndExpand" HorizontalOptions="FillAndExpand" Spacing="10" BackgroundColor="White" Padding="20,0,20,40">
+			<Label Text="Dietando" TextColor="#458b74" HorizontalOptions="CenterAndExpand" FontSize="25" />
+			<Image Source="Logo.png" WidthRequest="100" HeightRequest="100" HorizontalOptions="Center" VerticalOptions="Center" />
+			<Entry x:Name="txtEmail" Text="{Binding Email}" Placeholder="E-mail" Keyboard="Email" WidthRequest="250" HorizontalOptions="Center" VerticalOptions="Center" BackgroundColor="#e0eeee" />
+			<Entry x:Name="txtSenha" Text="{Binding Senha}" Placeholder="Senha" IsPassword="true" WidthRequest="250" HorizontalOptions="Center" VerticalOptions="Center" BackgroundColor="#e0eeee" />
+			<Button Text="Acessar" Command="{Binding Acess}" WidthRequest="120" HorizontalOptions="Center" VerticalOptions="Center" BackgroundColor="#458b74" TextColor="White" />
+		</StackLayout>
+	</ContentPage.Content>
+</ContentPage>
