@@ -1,20 +1,36 @@
 ﻿using System;
 using System.Collections.Generic;
 using Xamarin.Forms;
+using System.Collections.ObjectModel;
 
 namespace Dietando.ViewModel
 {
 	public class ListRefeicoesViewModel : BaseViewModel
 	{
-		private List<string> _listrefeicoes = new List<string>(){
-			"07:00 - Café da manhã",
-			"10:00 - Lanche",
-			"12:00 - Almoço",
-			"15:00 - Lanche",
-			"18:00 - Jantar",
-			"21:00 - Ceia",	
+		
+		private ObservableCollection<Refeicao> _listrefeicoes = new ObservableCollection<Refeicao>(){
+			new Refeicao{
+				id = 1, Horario = new TimeSpan(7,0,0), Title = "Café da Manhã", dataInicial = new DateTime(2016, 1, 31), dataFinal = new DateTime(2016, 3, 31), check = false
+			},
+			new Refeicao{
+				id = 2, Horario = new TimeSpan(7,0,0), Title = "Café da Manhã", dataInicial = new DateTime(2016, 1, 31), dataFinal = new DateTime(2016, 3, 31), check = false
+			},
+			new Refeicao{
+				id = 3, Horario = new TimeSpan(7,0,0), Title = "Café da Manhã", dataInicial = new DateTime(2016, 1, 31), dataFinal = new DateTime(2016, 3, 31), check = false
+			},
+			new Refeicao{
+				id = 4, Horario = new TimeSpan(7,0,0), Title = "Café da Manhã", dataInicial = new DateTime(2016, 1, 31), dataFinal = new DateTime(2016, 3, 31), check = false
+			},
+			new Refeicao{
+				id = 5, Horario = new TimeSpan(7,0,0), Title = "Café da Manhã", dataInicial = new DateTime(2016, 1, 31), dataFinal = new DateTime(2016, 3, 31), check = false
+			},
+			new Refeicao{
+				id = 6, Horario = new TimeSpan(7,0,0), Title = "Café da Manhã", dataInicial = new DateTime(2016, 1, 31), dataFinal = new DateTime(2016, 3, 31), check = false
+			},
+			
+
 		};
-		public List<string> ListRefeicoes{
+		public ObservableCollection<Refeicao> ListRefeicoes{
 			get{
 				return _listrefeicoes;
 			}
