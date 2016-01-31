@@ -10,6 +10,10 @@ namespace Dietando.View
 		public ViewLogin ()
 		{
 			InitializeComponent ();
+
+			MessagingCenter.Subscribe<TodoItem> ("TodoItem", "NovaTask", (sender) => {
+				this.Dados.Add (sender);
+			});
 		}
 	}
 }

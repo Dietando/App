@@ -31,7 +31,8 @@ namespace Dietando.ViewModel
 		public LoginViewModel ()
 		{
 			this.Acess = new Command (() => {
-//				this.Email += this.Senha;
+				this.Email += this.Senha;
+				MessagingCenter.Send (this, "ViewListRefeicoes");
 			});
 		}
 	}
