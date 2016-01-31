@@ -10,7 +10,7 @@ namespace Dietando
 		public App ()
 		{
 			// The root page of your application
-			MainPage = new ViewLogin();
+			MainPage = new ViewListRefeicoes();
 		}
 
 		protected override void OnStart ()
