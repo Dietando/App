@@ -9,7 +9,18 @@
 	<ContentPage.Content>
 		<StackLayout>
 			<ListView ItemsSource="{Binding ListRefeicoes}" SelectedItem="{Binding OnItemSelected}" >
-				
+				<DataTemplate>
+					<ViewCell>
+						<Grid>
+							<Grid.ColumnDefinitions>
+								<ColumnDefinition Width="2*" />
+								<ColumnDefinition Width="8*" />
+							</Grid.ColumnDefinitions>
+							<Label Text="{Binding Horario}" Grid.Column="0" FontFamily="Bold" />
+							<Label Text="{Binding Title}" Grid.Column="1" Font="Small" />
+						</Grid>
+					</ViewCell>
+				</DataTemplate>
 			</ListView>
 		</StackLayout>
 	</ContentPage.Content>
