@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<resources>
+  
+  <!-- Base theme applied no matter what API -->
+  <style name="MyTeme" parent="android:Theme.Holo.Light">
+    
+  </style>
+</resources>
+

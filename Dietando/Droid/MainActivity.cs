@@ -10,7 +10,11 @@ using Android.OS;
 
 namespace Dietando.Droid
 {
-	[Activity (Label = "Dietando.Droid", Icon = "@drawable/icon", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
+	[Activity (Label = "Dietando.Droid",
+			   Theme = "@style/MyTeme",
+			   Icon = "@drawable/icon", 
+			   MainLauncher = true, 
+			   ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
 	public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsApplicationActivity
 	{
 		protected override void OnCreate (Bundle bundle)
